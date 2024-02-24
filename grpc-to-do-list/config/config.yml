@@ -1,0 +1,22 @@
+Gin:
+  Mode: "debug"
+
+MysqlDB:
+    Master:
+      Host: 'localhost'
+      Port: '3306'
+      User: 'root'
+      Password: 'root'
+      Name: 'to_do_list'
+
+Redis:
+  ConnectionString: ""
+  Password: ""
+
+MachineID:
+  Id: 1
+
+Gelf:
+  Host: "gl.dev.dddd.link:12201"
+  LogSource: "grpc-to-do-list"
+  level: 6

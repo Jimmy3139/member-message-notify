@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package notification;
+
+option go_package = "./proto";
+
+
+// 通知服務定義
+service NotificationService {
+  // 發送通知的方法
+  rpc SendNotification (NotificationRequest) returns (NotificationResponse);
+}
+
+// 發送通知請求的消息格式
+message NotificationRequest {
+  string message = 1;
+}
+
+// 發送通知回應的消息格式
+message NotificationResponse {
+  bool success = 1;
+  string error = 2; // 如果success為false，則包含錯誤信息
+}

@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  grpc-to-do-list:
+    build:
+      context: ./grpc-to-do-list
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80" 
+    networks:
+      - grpc-network
+
+  grpc-notify-server:
+    build:
+      context: ./grpc-notify-server
+      dockerfile: Dockerfile
+    ports:
+      - "50051:50051" 
+    networks:
+      - grpc-network
+
+networks:
+  grpc-network:
+    driver: bridge

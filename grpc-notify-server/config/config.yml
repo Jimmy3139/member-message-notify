@@ -1,0 +1,8 @@
+Gin:
+  Mode: "debug"
+Mqtt:
+  Broker: "tcp://l07.dev.sadas.link:1883"
+  ClientID: "zone_datacollation"
+  KeepAlive: 0
+  TopicCorrection: "system"
+  ActionMemberRegister: "sys_member_register"
