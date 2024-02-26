@@ -18,7 +18,7 @@ func NewNotifyService(config *config.Configurations, mq *mq.MqttCli) *NotifyServ
 
 func (s *NotifyService) SendNotification(context.Context, *proto.NotificationRequest) (*proto.NotificationResponse, error) {
 
-	s.mq.PublishMaintainInfo("notification message")
+	s.mq.PublishMemberRegisterInfo("notification message")
 
 	return &proto.NotificationResponse{Success: true}, nil
 }
